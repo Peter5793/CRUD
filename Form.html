@@ -1,0 +1,115 @@
+<!-- ## The html code of the form goes here -->
+<!-- ## This is included in the Index.html page using "include('Form')" function -->
+
+<form id="myForm" class="p-2 border border-light rounded bg-light" onsubmit="handleFormSubmit(this)"> <!-- Call JavaScript function "handleFormSubmit" -->
+    <div class ="box">
+     <p class="h4 mb-4 text-center">Customer Payment Details</p>
+     <div id="message"></div>
+     <input type="text" id="RecId" name="RecId" value="" style="display: none">
+     <h3 style="color:red;">First Payment for Details</h3>
+     <div class="form-group">
+         <label for="name" >Name</label>
+         <input type="text" class="form-control" id="name" name="name" placeholder="Name" text-transform ="upper-case" required>
+     </div>
+ 
+     <div class="form-row">
+         <div class="form-group col-md-6">
+             <p>Gender</p>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                 <label class="form-check-label" for="male">Male</label>
+             </div>
+             <div class="form-check form-check-inline">
+                 <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                 <label class="form-check-label" for="female">Female</label>
+             </div>
+         </div>
+         <div class="form-group col-md-6">
+             <label for="dateOfPayment">Date of Payment</label>
+             <input type="date" class="form-control" id="dateOfPayment" name="dateOfPayment" required>
+         </div>
+     </div>
+     <div class="form-group">
+         <label for="email">Email</label>
+         <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+     </div>
+     <div class="form-row">
+       <div class="form-group col-md-6">
+           <label for="phone">Phone Number</label>
+           <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+       </div>
+       <div class="form-group col-md-6">
+           <label for="bundlephone">Data Number</label>
+           <input type="tel" class="form-control" id="bundlephone" name="bundlephone" placeholder="Data Number" required>
+       </div>
+        <div class="form-group col-md-6">
+         <label for="exampleFormControlSelect1">Service Provider</label>
+         <select class="form-control" id="serviceProvider" name="serviceProvider">
+           <option>Safaricom</option>
+           <option>Airtel</option>
+           <option>Telkom</option>
+         </select>
+       </div>
+       <div class="form-group col-md-6">
+         <label for="exampleFormControlSelect1">Personal Profile</label>
+         <select class="form-control" id="personalProfile" name="personalProfile">
+           <option>PP 1</option>
+           <option>PP 2</option>
+           <option>PP 3</option>
+           <option>PP 3</option>
+         </select>
+       </div>
+      
+       <div class="form-group">
+         <label for="amountPaid" >Amount Paid</label>
+         <input type="number" step="500.00" class="form-control" id="amountPaid" name="amountPaid" placeholder="Fee paid" required>
+     </div>
+     <div class="form-group col-md-12">
+         <label for="status" >Status</label>
+         <select class="form-control" id="status" name="status">
+           <option>Paid</option>
+           <option>Pending</option>
+         </select>
+        
+     
+         <label for="category" >Category</label>
+         <select class="form-control" id="category" name="category">
+           <option> Discount</option>
+           <option> Full Price</option>
+     </select>
+         
+      <div class="form-group">
+         <label for="transactionCode" >Transaction Code</label>
+         <input type="text" class="form-control" id="transactionCode" name="transactionCode" placeholder="MPESA OR BANK" required>
+     </div>
+     </div>
+     <h3 style="color:red;">Second Payments</h3>
+     <div class="form-group col-md-12">
+             <label for="dateofSecondPayment">Date of Second Payment</label>
+             <input type="date" class="form-control" id="dateofSecondPayment" name="dateofSecondPayment">
+         </div>
+       <div class="form-group col-md-12">
+         <label for="amountPaid2" >Second Amount Paid</label>
+         <input type="number" class="form-control" id="amountPaid2" name="amountPaid2" placeholder="Fee paid" >
+     
+         <label for="transactionCodeII" >Transaction Code II</label>
+         <input type="text" class="form-control" id="transactionCodeII" name="transactionCodeII" placeholder="MPESA OR BANK">
+     </div>
+     <h3 style="color:red;">Third Payments </h3>
+     <div class="form-group col-md-12">
+             <label for="dateofThirdPayment">Date of Third Payment</label>
+             <input type="date" class="form-control" id="dateofThirdPayment" name="dateofThirdPayment">
+         </div>
+       <div class="form-group col-md-12">
+         <label for="amountPaid3" >Third Amount Paid</label>
+         <input type="number" class="form-control" id="amountPaid3" name="amountPaid3" placeholder="Fee paid" >
+     
+         <label for="transactionCodeIII" >Transaction Code III</label>
+         <input type="text" class="form-control" id="transactionCodeIII" name="transactionCodeIII" placeholder="MPESA OR BANK" >
+     </div>
+         
+     </div>
+     <button type="submit" class="btn btn-primary">Submit</button>
+     <input class="btn btn-secondary" type="reset" value="Reset">
+  </div>   
+ </form>
